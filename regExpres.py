@@ -6,7 +6,7 @@ dateList = ["JJ Log 5-7-11.aup", "JJ Log 5-8-11.mp3", "JJ Log 5-9-11.mp3", "JJ L
 for dates in dateList:
 	#dates = re.sub(r'[(\|a-z|A-Z|\.|\s]', '', dates)
 	print("----------------")
-	dates = dates.strip("mp3")
+	dates = re.sub(r'\..+', '', dates)
 	print(dates)
 	dates = re.sub(r'[^\d|\-]', '', dates)
 	print(dates)
