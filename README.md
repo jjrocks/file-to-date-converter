@@ -8,4 +8,4 @@ I had a folder that a list of logs called "JJ Log X-XX-XX.aup" where the X's whe
 - Show upcomming log dates.
 
 # Known Bugs
-- If there are any extensions with numbers it will not delete that number (I did a hotfix for .mp3)
+- None! Fixed the last bug.
