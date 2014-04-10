@@ -15,7 +15,7 @@ def checkLog(dateList):
 	todayDate = date.today()
 	for dates in dateList:
 		if(date.today() == dates.replace(year = dates.year + 3)):
-			print(dates)
+			print("You have a log to listen to today")
 
 
 
