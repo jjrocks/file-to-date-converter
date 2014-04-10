@@ -6,6 +6,7 @@ I had a folder that a list of logs called "JJ Log X-XX-XX.aup" where the X's whe
 - Google Calendar Support
 - Add support for whether you need to listen/read to a log that day
 - Show upcomming log dates.
+- Transform functions into organized classes for a library
 
 # Known Bugs
 - None! Fixed the last bug.
