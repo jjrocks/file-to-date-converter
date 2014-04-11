@@ -11,24 +11,52 @@ def stringListToDateList(stringList):
 			dateList.append(date(int(currentDateString[2])+2000, int(currentDateString[0]), int(currentDateString[1])))
 	return dateList
 
-def checkLog(dateList):
-	todayDate = date.today()
-	for dates in dateList:
-		if(date.today() == dates.replace(year = dates.year + 3)):
-			print("You have a log to listen to today")
-			return
-	print("There is no log for today")
-
-'''
 def sortDateArray(dateList):
-	if (len(dateList) == 0 || len(dateList) == 1):
+	arrayA = []
+	arrayB = []
+	if (len(dateList) == 0 or len(dateList) == 1):
 		return dateList
 	else:
-		length = len(dateList)/2
-		halfLength = length/2
-		sortDateArray(dateList[0:halfLength]-1)
-		sortDateArray(dateList[halfLength:length-1])
-'''	
+		length = len(dateList)
+		halfLength = int(length/2)
+		arrayA = sortDateArray(dateList[0:halfLength])
+		arrayB = sortDateArray(dateList[halfLength:])
+	arrayC = []
+	length = 0
+	if len(arrayA) > len(arrayB):
+		length = len(arrayA)
+	else:
+		length = len(arrayB)
+	p = 0
+	q = 0
+	for x in range(0, length):
+		if arrayA[p] < arrayB[q]:
+			arrayC.append(arrayA[p])
+			p+= 1
+		else:
+			arrayC.append(arrayB[q])
+			q+= 1
+		if p >= len(arrayA):
+			arrayC = arrayC + arrayB[q:]
+			break
+		elif q >= len(arrayB):
+			arrayC = arrayC + arrayA[p:]
+			break
+	return arrayC
+
+def checkLog(dateList):
+	todayDate = date.today()
+	dateList = sortDateArray(dateList)
+	for dates in dateList:
+		dateOffset = dates.replace(year = dates.year + 3)
+		if(todayDate == dateOffset):
+			print("You have a log to listen to today")
+			return
+		if todayDate < dateOffset:
+			message = "There is no log for today. The next one will be " + dateOffset.strftime("%m-%d-%y")
+			print("There is no log for today")
+			return
+	print("There is no log for today and never will be. The path is empty.")
 
 
 
