@@ -16,6 +16,17 @@ def checkLog(dateList):
 	for dates in dateList:
 		if(date.today() == dates.replace(year = dates.year + 3)):
 			print("You have a log to listen to today")
+	print("There is no log for today")
+
+def sortDateArray(dateList):
+	if (len(dateList) == 0 || len(dateList) == 1):
+		return dateList
+	else:
+		length = len(dateList)/2
+		halfLength = length/2
+		sortDateArray(dateList[0:halfLength]-1)
+		sortDateArray(dateList[halfLength:length-1])
+	
 
 
 
