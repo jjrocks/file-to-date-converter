@@ -29,7 +29,7 @@ def sortDateArray(dateList):
 		length = len(arrayB)
 	p = 0
 	q = 0
-	for x in range(0, length):
+	for x in range(0, length*2):
 		if arrayA[p] < arrayB[q]:
 			arrayC.append(arrayA[p])
 			p+= 1

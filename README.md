@@ -4,14 +4,14 @@ I had a folder that a list of logs called "JJ Log X-XX-XX.aup" where the X's whe
 
 #Features
 - Add support for whether you need to listen/read to a log that day
+- Figure out when the next log needs to be read
 
 # To Do
 - Google Calendar Support
-- Show upcomming log dates.
 - Transform functions into organized classes for a library
 
 # Currently working on
-- Sorting the array for faster look up. (Possibly mergesort)
+- Transform classes to another library
 
 # Known Bugs
-- None! Fixed the last bug.
+- No bugs reported

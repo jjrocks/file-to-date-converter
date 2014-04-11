@@ -1,7 +1,7 @@
 import re
 from datetime import date
 
-dateList = ["JJ Log 5-7-11.aup", "JJ Log 5-8-11.mp3", "This is my cool pants", "JJ Log 5-9-11.mp3", "JJ Log 5-10-11.aup", "JJ Log 4-7-11.aup", "JJ Log 12-13-11.aup", "JJ Log 11-15-11.mp3", "JJ Log 3-13-33.mp3"]
+dateList = ["JJ Log 5-7-12aup", "JJ Log 5-8-11.mp3", "This is my cool pants", "JJ Log 5-9-11.mp3", "JJ Log 5-10-11.aup", "JJ Log 4-7-11.aup", "JJ Log 12-13-11.aup", "JJ Log 11-15-11.mp3", "JJ Log 3-13-33.mp3"]
 
 def stringListToDateList(stringList):
 	dateList = []
@@ -29,7 +29,7 @@ def sortDateArray(dateList):
 		length = len(arrayB)
 	p = 0
 	q = 0
-	for x in range(0, length):
+	for x in range(0, length*2):
 		if arrayA[p] < arrayB[q]:
 			arrayC.append(arrayA[p])
 			p+= 1
@@ -54,5 +54,5 @@ dateList = dateListTmp
 
 actualDates = stringListToDateList(dateList)
 actualSortDates = sortDateArray(actualDates)
-
+print(actualDates)
 print(actualSortDates)
